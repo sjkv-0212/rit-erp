@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramco Institute of Technology - Student Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <button class="hamburger" id="menuBtn">☰</button>
+    <div class="brand">
+      <div class="logo">RIT</div>
+      <div><div class="brand-title">Ramco Institute of Technology</div><div class="brand-sub">Student Management</div></div>
+    </div>
+    <div class="top-right">
+      <button class="bell">♟<span class="caret">▼</span></button>
+      <div class="user"><div class="user-name">SANJEV KUMAR</div><div class="user-role">Student</div></div>
+      <div class="avatar">S</div>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="dept">ELECTRICAL AND<br>ELECTRONICS<br>ENGINEERING</div>
+    <nav>
+      <a href="#home">⌂ <span>Home</span></a>
+      <a href="#dashboard">◉ <span>Go to Dashboard</span></a>
+      <a href="#profile">▤ <span>Profile</span></a>
+      <a href="#dashboard">▤ <span>Dashboard</span></a>
+      <a href="#club">▤ <span>Club Enroll</span></a>
+      <a href="#nodues">▤ <span>No Dues Apply</span></a>
+      <a class="active" href="#apply"><span class="leave-image small" aria-hidden="true"></span> <span>Apply Leave Od</span></a>
+      <a href="#bonafide">▤ <span>Bonafide Apply</span></a>
+      <a href="#timetable">▤ <span>Student Timetable</span></a>
+      <a href="#attendance">▤ <span>Student Attendance</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section id="apply" class="page">
+      <div class="hero">
+        <div class="hero-icon leave-image" aria-hidden="true"></div>
+        <h1>Leave &amp; On-Duty Portal</h1>
+        <p>Apply for leave or on-duty and track your applications</p>
+      </div>
+
+      <div class="card application-card">
+        <div class="section-head"><span class="leave-image small" aria-hidden="true"></span> <span>Leave / OD Application</span></div>
+        <div class="content">
+          <h2>♟ &nbsp; Student Information</h2>
+          <div class="line"></div>
+          <div class="student-grid">
+            <div class="info-box"><div class="info-icon">♟</div><div><small>Name</small><strong>SANJEV KUMAR</strong></div></div>
+            <div class="info-box"><div class="info-icon"><span class="leave-image tiny" aria-hidden="true"></span></div><div><small>Register Number</small><strong>953624105046</strong></div></div>
+            <div class="info-box"><div class="info-icon">▦</div><div><small>Department</small><strong>ELECTRICAL AND<br>ELECTRONICS ENGINEERING</strong></div></div>
+          </div>
+
+          <h2>▤ &nbsp; Application Details</h2>
+          <div class="line"></div>
+          <div class="detail-grid">
+            <button class="field" id="typeField"><span class="field-icon">◆</span><span><b>APPLICATION TYPE</b><em id="typeValue">Select application type</em></span></button>
+            <button class="field"><span class="field-icon"><span class="leave-image tiny" aria-hidden="true"></span></span><span><b>FROM DATE &amp; TIME</b><em>Choose start date and time</em></span></button>
+            <button class="field"><span class="field-icon"><span class="leave-image tiny" aria-hidden="true"></span></span><span><b>TO DATE &amp; TIME</b><em>Choose end date and time</em></span></button>
+            <div class="field"><span class="field-icon">◷</span><span><b>DURATION</b><em>Choose date and time</em><small>Calculated from the selected time range</small></span></div>
+          </div>
+          <label class="reason-label">Reason</label>
+          <textarea placeholder="Enter your reason..." id="reason"></textarea>
+          <div class="submit-row"><button class="submit" id="submitBtn">➤ &nbsp; Submit Application</button></div>
+        </div>
+      </div>
+
+      <div class="card applications-card">
+        <div class="section-head">☷ <span>Your Applications</span></div>
+        <div class="filters">
+          <div class="search"><span>⌕</span><input id="search" placeholder="Search applications..."></div>
+          <select id="typeFilter"><option>All Types</option><option>OD</option><option>Leave</option></select>
+          <select id="statusFilter"><option>All Statuses</option><option>Approved</option><option>Pending</option></select>
+        </div>
+        <div class="table-wrap">
+          <table id="appsTable">
+            <thead><tr><th>#</th><th>TYPE</th><th>FROM</th><th>TO</th><th>DAYS</th><th>REASON</th><th>PROOF</th><th>APPROVAL FLOW</th><th>STATUS</th><th>REMARKS</th><th>APPLIED ON</th></tr></thead>
+            <tbody>
+              <tr data-type="OD" data-status="Approved">
+                <td>1</td><td><span class="pill od">▣ &nbsp; OD</span></td>
+                <td><b>10 Sep<br>2026</b><small>04:00 AM</small></td>
+                <td><b>11 Sep<br>2026</b><small>07:00 PM</small></td>
+                <td><span class="duration">1 day 15<br>hours</span></td>
+                <td>CM<br>trophy</td>
+                <td><button class="view">◉ &nbsp; View</button></td>
+                <td><div class="approval"><div><i>1</i><b>ARUN<br>KUMAR A<br>(1307)</b><small>APPROVED</small></div><div><i>1</i><b>SIVAPRIYA<br>G (1316)</b><small>APPROVED</small></div><div><i>2</i><b>THANGAM E<br>(1310)</b><small>APPROVED</small></div></div></td>
+                <td><span class="status approved">● Approved</span></td><td>-</td><td><b>09 Sep<br>2026</b><small>03:58 PM</small></td>
+              </tr>
+              <tr data-type="Leave" data-status="Pending">
+                <td>2</td><td><span class="pill leave"><span class="leave-image tiny" aria-hidden="true"></span> Leave</span></td>
+                <td><b>28 Aug<br>2026</b><small>03:00 PM</small></td>
+                <td><b>30 Aug<br>2026</b><small>03:00 PM</small></td>
+                <td><span class="duration">2 days</span></td><td>Common<br>leave</td><td>-</td>
+                <td><div class="approval"><div><i>1</i><b>ARUN<br>KUMAR A<br>(1307)</b><small>PENDING</small></div><div><i>1</i><b>SIVAPRIYA<br>G (1316)</b><small>PENDING</small></div><div><i>2</i><b>THANGAM E<br>(1310)</b><small>PENDING</small></div></div></td>
+                <td><span class="status pending">● Pending</span></td><td>-</td><td><b>28 Aug<br>2026</b><small>02:36 PM</small></td>
+              </tr>
+              <tr data-type="Leave" data-status="Approved">
+                <td>3</td><td><span class="pill leave"><span class="leave-image tiny" aria-hidden="true"></span> Leave</span></td>
+                <td><b>18 Sep<br>2026</b><small>10:30 AM</small></td>
+                <td><b>20 Sep<br>2026</b><small>07:00 PM</small></td>
+                <td><span class="duration">2 days 6<br>hours 40<br>minutes</span></td><td>Grandfathers<br>birthday<br>celebration</td><td>-</td>
+                <td><div class="approval"><div><i>1</i><b>ARUN<br>KUMAR A<br>(1307)</b><small>APPROVED</small></div><div><i>1</i><b>SIVAPRIYA<br>G (1316)</b><small>APPROVED</small></div><div><i>2</i><b>THANGAM E<br>(1310)</b><small>APPROVED</small></div></div></td>
+                <td><span class="status approved">● Approved</span></td><td>-</td><td><b>17 Aug<br>2026</b><small>11:27 AM</small></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="page simple-page"><div class="hero"><h1>Student Dashboard</h1><p>Welcome to Ramco Institute of Technology Student Management</p></div></section>
+    <section id="home" class="page simple-page"><div class="hero"><h1>Home</h1><p>Ramco Institute of Technology Student Management</p></div></section>
+    <section id="profile" class="page simple-page"><div class="hero"><h1>Student Profile</h1><p>SANJEV KUMAR · Electrical and Electronics Engineering</p></div></section>
+  </main>
+  <button class="assistant">⚒ &nbsp; AI Assistant</button>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-box"><button class="close" id="close">×</button><h3>Select Application Type</h3>
+    <button class="choice" data-choice="OD">▣ &nbsp; On-Duty (OD)</button>
+    <button class="choice" data-choice="Leave"><span class="leave-image tiny" aria-hidden="true"></span> &nbsp; Leave</button>
+  </div>
+</div>
+<div class="toast" id="toast">Application submitted successfully.</div>
+<script src="script.js"></script>
+</body>
+</html>
