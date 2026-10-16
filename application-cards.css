@@ -154,6 +154,12 @@
     min-height: 76px;
   }
 
+  tbody td:nth-child(3) b br,
+  tbody td:nth-child(4) b br,
+  tbody td:nth-child(11) b br {
+    display: none;
+  }
+
   tbody td:nth-child(11) {
     display: block;
     text-align: left;
