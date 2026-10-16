@@ -130,11 +130,28 @@
   tbody td:nth-child(10)::before { content: "REMARKS"; }
   tbody td:nth-child(11)::before { content: "APPLIED ON"; }
 
+  tbody td:nth-child(2),
   tbody td:nth-child(3),
   tbody td:nth-child(4) {
-    display: grid;
-    grid-template-columns: 76px minmax(0, 1fr);
-    align-items: center;
+    display: block;
+    text-align: left;
+  }
+
+  tbody td:nth-child(2)::before,
+  tbody td:nth-child(3)::before,
+  tbody td:nth-child(4)::before {
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  tbody td:nth-child(2) .pill {
+    display: block;
+    width: 100%;
+  }
+
+  tbody td:nth-child(3),
+  tbody td:nth-child(4) {
+    min-height: 76px;
   }
 
   tbody td:nth-child(11) {
@@ -142,23 +159,9 @@
     text-align: left;
   }
 
-  tbody td:nth-child(3)::before,
-  tbody td:nth-child(4)::before {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-  }
-
   tbody td:nth-child(11)::before {
     display: block;
     margin-bottom: 7px;
-  }
-
-  tbody td:nth-child(3) b,
-  tbody td:nth-child(4) b,
-  tbody td:nth-child(3) small,
-  tbody td:nth-child(4) small {
-    grid-column: 2;
-    justify-self: start;
   }
 
   tbody td:nth-child(11) b,
