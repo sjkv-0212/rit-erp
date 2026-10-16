@@ -131,27 +131,49 @@
   tbody td:nth-child(11)::before { content: "APPLIED ON"; }
 
   tbody td:nth-child(3),
-  tbody td:nth-child(4),
-  tbody td:nth-child(11) {
+  tbody td:nth-child(4) {
     display: grid;
-    grid-template-columns: 76px 1fr;
+    grid-template-columns: 76px minmax(0, 1fr);
+    align-items: center;
+  }
+
+  tbody td:nth-child(11) {
+    display: block;
+    text-align: left;
   }
 
   tbody td:nth-child(3)::before,
-  tbody td:nth-child(4)::before,
-  tbody td:nth-child(11)::before {
+  tbody td:nth-child(4)::before {
     grid-column: 1;
     grid-row: 1 / span 2;
   }
 
+  tbody td:nth-child(11)::before {
+    display: block;
+    margin-bottom: 7px;
+  }
+
   tbody td:nth-child(3) b,
   tbody td:nth-child(4) b,
-  tbody td:nth-child(11) b,
   tbody td:nth-child(3) small,
-  tbody td:nth-child(4) small,
-  tbody td:nth-child(11) small {
+  tbody td:nth-child(4) small {
     grid-column: 2;
     justify-self: start;
+  }
+
+  tbody td:nth-child(11) b,
+  tbody td:nth-child(11) small {
+    display: block;
+    text-align: left;
+  }
+
+  tbody td:nth-child(5) {
+    display: block;
+  }
+
+  tbody td:nth-child(5)::before {
+    display: block;
+    margin-bottom: 7px;
   }
 
   tbody td:nth-child(8) {
@@ -210,7 +232,8 @@
   }
 
   tbody td:nth-child(5) .duration {
-    flex: 1;
+    display: block;
+    width: 100%;
     padding: 5px 10px;
     text-align: center;
   }
